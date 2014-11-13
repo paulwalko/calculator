@@ -13,16 +13,33 @@ body{
 	margin-left: -8px;
 }
 #front{	
-	position: absolute;
-	top: 200px;
-	left: 50%;
+	margin-top: 100px;
+	/*left: 50%;*/
 	text-align: center;
-	margin-left: -585px;
-	width: 1170px;
+	margin-left: auto;
+	margin-right:auto;
+	width: 300px;
 	font-family: 'Roboto Slab', serif;
 	background-color: white;
 }
-#front > h1{
-	margin-top: 0px;
-	font-size: 122px;
+.eq, #result,input,p{
+	display: inline;
+	margin:0px; 
+	padding:0px;
+}
+#front{
+	width: 250px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+	border: 2px solid #a1a1a1;
+	padding: 10px 40px; 
+	background: #dddddd;
+	border-radius: 25px;
+}
+#calculator input, #calculator p{
+	width: 100%;
+}
+.sub{
+	font-weight: bold;
 }
