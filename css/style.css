@@ -1,7 +1,6 @@
 canvas{
 	background-color: #ffffff;
 }
-
 body{
 	background-color: #ddd;
 	overflow-x: hidden;
@@ -11,8 +10,8 @@ body{
 	top: 0px;
 	height: 100%;
 	z-index: -1;
+	margin-left: -8px;
 }
-
 #front{	
 	position: absolute;
 	top: 200px;

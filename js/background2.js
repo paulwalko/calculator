@@ -4,7 +4,7 @@ var main;
 
 function start(){
 	var c=document.getElementById("screen");
-	var screen = new Screen("100%","585",c);
+	var screen = new Screen("100%","590",c);
 	main = new backgrounds(screen);
 	if(Math.random()>.7)
 	main.addScene(15000, new lighting());
