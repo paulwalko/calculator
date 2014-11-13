@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">	
+	<script src="js/jquery.js"></script>
+	<script src="js/two.min.js"></script>
+	<script src="js/randomColor.js"></script>
+
+	<style type="text/css">
+	.eq,#result,p {
+		display: inline;
+		margin:0px; 
+		padding:0px;
+	}
+	</style>
+	<script type="text/javascript">
+	function Calculate(){
+		var form = document.getElementById("calculator");
+		var output = form.elements["c"];
+		var a = parseInt(form.elements["a"].value);
+		var b = parseInt(form.elements["b"].value);
+		var op = parseInt(form.elements["selector"].value);
+		switch(op){
+			case 0:
+				output.value = a * b;
+				break;
+			case 1:
+				output.value = a / b;
+				break;
+			case 2:
+				output.value = a + b;
+				break;
+			case 3:
+				output.value = a - b;
+				break;
+			case 4:
+				output.value = Math.log(a);
+				break;
+			case 5:
+				output.value = Math.pow(a, b);
+				break;
+			case 6:
+				output.value = Math.tan(a);
+				break;
+			case 7:
+				output.value = Math.cos(a);
+				break;
+			case 8:
+				output.value = Math.sin(a);
+				break;
+			case 9:
+				output.value = Math.abs(a);
+				break;
+			case 10:
+				output.value = Math.exp(a);
+				break;
+			default:
+			break;
+		}
+	}
+	</script>
+</head>
+<body>	
+	<canvas id="screen">
+	</canvas>
+	<div id="front">
+
+		<h2>Reverse Polish Notation Calculator</h2>
+		<p>*&nbsp;&nbsp;For Single number operations, only use first field</p>
+		<form id="calculator" oninpt="Calculate()">
+			<input name="a" type="number" value="0"/>
+			<input name="b" type="number" value="0"/>
+			<select name="selector" onchange="Calculate()">
+				<option value="-1">Select an Operation</option>
+				<option value="0">*</option>
+				<option value="1">/</option>
+				<option value="2">+</option>
+				<option value="3">-</option>
+				<option value="4">log</option>
+				<option value="5">^</option>
+				<option value="6">tan</option>
+				<option value="7">cos</option>
+				<option value="8">sin</option>
+				<option value="9">abs</option>
+				<option value="10">e^x</option>
+			</select>
+			<div class="eq">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+			<output id="result" name="c" for="x y">0</output>
+		</form>
+		<h4> &copy;&nbsp;Paul Walko&nbsp;2014</h4>
+	</div>
+	<script type="text/javascript" src="js/background2.js"></script>
+</body>
+</html>
