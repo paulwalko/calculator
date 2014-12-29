@@ -6,5 +6,4 @@ Credits
 ===========
 
 Background:
-
 	https://github.com/davidjokinen
