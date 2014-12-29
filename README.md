@@ -7,4 +7,4 @@ Credits
 
 Background:
 
-	[David Jokinen](https://github.com/davidjokinen)
+	https://github.com/davidjokinen
